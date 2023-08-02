@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Frontend Example</title>
+</head>
+<body>
+    <h1>Protected Resource</h1>
+    <div id="message"></div>
+
+    <script>
+        // Replace with your actual backend API endpoint
+        const apiUrl = 'http://127.0.0.1:8000/STA';
+
+        // Replace with your actual access token
+        const accessToken = localStorage.getItem("access");
+
+        // Helper function to fetch the protected resource
+        async function fetchProtectedResource() {
+            const headers = {
+                'Authorization': `Bearer ${accessToken}`,
+                'Content-Type': 'application/json'
+            };
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'GET',
+                    headers: headers
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    document.getElementById('message').textContent = data.message;
+                } else {
+                    document.getElementById('message').textContent = 'Error: Unable to access protected resource.';
+                }
+            } catch (error) {
+                document.getElementById('message').textContent = 'Error: Unable to access protected resource.';
+            }
+        }
+
+        // Call the function to fetch the protected resource
+        fetchProtectedResource();
+    </script>
+</body>
+</html>

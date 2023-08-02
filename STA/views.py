@@ -9,8 +9,9 @@ from rest_framework.settings import api_settings
 from rest_framework.authtoken.models import Token
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
+from rest_framework.permissions import IsAuthenticated
 
-# Create your views here.
+# views here.
 
 class UserSignUpViewSet(APIView):
     serializer_class = SignUpSerializer
@@ -25,15 +26,29 @@ class UserSignUpViewSet(APIView):
             'access': str(refresh.access_token),
         })
 
-@api_view(['POST'])
-def login(request):
-    if request.method == 'POST':
-        serializer = LoginSerializer(data=request.data)
-        if serializer.is_valid():
-            user = serializer.validated_data['user']
-            refresh = RefreshToken.for_user(user)
-            return Response({
-                'refresh': str(refresh),
-                'access': str(refresh.access_token),
-            }, status=status.HTTP_200_OK)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+class LoginApiView(APIView):
+    permission_classes = ()
+    authentication_classes = ()
+    serializer_class = LoginSerializer
+    def post(self, request, *args, **kwargs):
+        
+        print('hi')
+        if request.method == 'POST':
+            serializer = LoginSerializer(data=request.data)
+            print(request.data)
+            if serializer.is_valid():
+                user = serializer.validated_data['user']
+                refresh = RefreshToken.for_user(user)
+                return Response({
+                    'refresh': str(refresh),
+                    'access': str(refresh.access_token),
+                }, status=status.HTTP_200_OK)
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        
+
+class STAApiView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        # Your view logic here
+        return Response({"message": "This is a protected view accessible to authenticated users."})

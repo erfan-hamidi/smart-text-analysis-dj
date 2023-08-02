@@ -29,12 +29,12 @@ loginForm.addEventListener("submit", (e) => {
     })
     .then((data) => {
       // Handle the response from the API
-      console.log(data);
+      console.log(data.refresh);
       // For simplicity, just log the token received from the API
       alert("Login successful!");
       localStorage.setItem("refresh", data.refresh);
       localStorage.setItem("access", data.access);
-      const homeUrl = 'http://127.0.0.1:8000/STA/'; // Replace with your home URL
+      const homeUrl = 'home.html'; // Replace with your home URL
       window.location.href = homeUrl;
     })
     .catch((error) => {
