@@ -5,7 +5,7 @@ from STA.views import *
 
 
 urlpatterns = [
-    path('login/', UserLoginApiView.as_view()),
+    path('login/', login, name='api_view'),
     path('', UserSignUpViewSet.as_view()),
 
 ]
