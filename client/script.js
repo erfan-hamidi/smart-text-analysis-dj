@@ -1,24 +1,25 @@
 const loginForm = document.getElementById("loginForm");
-
+console.log(loginForm)
 // Function to handle the login form submission
 loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
+  const formData = new FormData(loginForm);
+  const email = formData.get("email");
+  const password = formData.get("password");
 
   const loginData = {
     email: email,
     password: password,
   };
-
+  console.log(loginData)
   // Replace 'your-api-login-endpoint' with the actual login API endpoint in your Django backend
   fetch("http://127.0.0.1:8000/STA/login/", {
-    mode: 'cors',
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(loginData),
+    
   })
     .then((response) => {
       if (!response.ok) {
