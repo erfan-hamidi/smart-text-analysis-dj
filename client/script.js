@@ -31,8 +31,10 @@ loginForm.addEventListener("submit", (e) => {
       // Handle the response from the API
       console.log(data);
       // For simplicity, just log the token received from the API
-      alert("Login successful! Token: " + data.token);
-      const homeUrl = 'https://example.com/home'; // Replace with your home URL
+      alert("Login successful!");
+      localStorage.setItem("refresh", data.refresh);
+      localStorage.setItem("access", data.access);
+      const homeUrl = 'http://127.0.0.1:8000/STA/'; // Replace with your home URL
       window.location.href = homeUrl;
     })
     .catch((error) => {
@@ -40,3 +42,5 @@ loginForm.addEventListener("submit", (e) => {
       // Add error handling logic, like showing an error message to the user
     });
 });
+
+
