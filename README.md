@@ -10,6 +10,10 @@ downlaod model :
 <p><a href="https://drive.google.com/file/d/13QmMsfNwvm6U4asXd6gurvSkl3nbuIEL/view?usp=drive_link"> english sentiment analysis model link (imdb dataset)</a>  </p>
 <p><a href="https://drive.google.com/file/d/13QmMsfNwvm6U4asXd6gurvSkl3nbuIEL/view?usp=drive_link"> persian sentiment analysis model link (digikala dataset) </a>  </p>
 
+## Charts
+persian sentiment analysis model plot
+<img src="https://s8.uupload.ir/files/per-sen-model-chart_0jbt.png" width="900" height="400" > 
+
 ## Installation
 
 ```bash
