@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    min-height: 100vh;
+    font-family: 'Jost', sans-serif;
+	background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+}
+
+.chat-container {
+    width: 1000px;
+	height: 700px;
+	background: red;
+	overflow: hidden;
+    background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
+    border-radius: 10px;
+    box-shadow: 5 20 50px rgba(0, 0, 0, 0.1);
+}
+
+.chat-history {
+    padding: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.chat-input {
+    
+    margin-top: 570px;
+    margin-left: 100px;
+    
+    display: flex;
+    padding: 10px;
+    
+    
+}
+
+input[type="text"] { 
+    width: 700px;
+	height: 32px;
+	background: #e0dede;
+	justify-content: center;
+	display: flex;
+	padding: 10px;
+	border: none;
+	outline: none;
+	border-radius: 17px;
+}
+
+button {
+    padding: 8px 20px;
+    margin-left: 5px;
+    background-color: #573b8a;
+    color: #fff;
+    border: none;
+    border-radius: 17px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #6d44b8;
+}
