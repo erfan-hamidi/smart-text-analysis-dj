@@ -145,7 +145,14 @@ button:hover {
   }
   50%,
   100% {
-    box-shadow: 0px 0px 0px transparent, -2.23929px 19.87424px #f94144, -19.49856px -4.45042px #f94144, 6.60558px -18.87767px #f94144, 18.01938px 8.67767px #f94144, -10.64064px 16.93448px #f94144, -15.63663px -12.4698px #f94144, 14.14214px -14.14214px #f94144, 0px 0px 0px transparent, -25.98076px -15px #f9c74f, 15px 25.98076px #f9c74f, 0px -30px #f9c74f, 0px 0px 0px transparent, -28.51221px -14.5277px #ffd166, 18.80913px 25.88854px #ffd166, -5.0059px -31.60603px #ffd166, -9.88854px 30.43381px #ffd166, 22.62742px -22.62742px #ffd166;
+    box-shadow: 0px 0px 0px transparent, -2.23929px 19.87424px #f94144,
+    -19.49856px -4.45042px #f94144, 6.60558px -18.87767px #f94144, 
+    18.01938px 8.67767px #f94144, -10.64064px 16.93448px #f94144, 
+    -15.63663px -12.4698px #f94144, 14.14214px -14.14214px #f94144, 
+    0px 0px 0px transparent, -25.98076px -15px #f9c74f, 15px 25.98076px #f9c74f, 
+    0px -30px #f9c74f, 0px 0px 0px transparent, -28.51221px -14.5277px #ffd166, 
+    18.80913px 25.88854px #ffd166, -5.0059px -31.60603px #ffd166, 
+    -9.88854px 30.43381px #ffd166, 22.62742px -22.62742px #ffd166;
     opacity: 1;
   }
   100% {
@@ -156,13 +163,23 @@ button:hover {
 
 @keyframes particleAnimate {
   0% {
-    box-shadow: 0px 0px 0px transparent, NaNpx NaNpx transparent, NaNpx NaNpx transparent, 0px 0px 0px transparent, NaNpx NaNpx transparent, NaNpx NaNpx transparent, 0px 0px 0px transparent, NaNpx NaNpx transparent, NaNpx NaNpx transparent;
+    box-shadow: 0px 0px 0px transparent, NaNpx NaNpx transparent, 
+    NaNpx NaNpx transparent, 0px 0px 0px transparent, NaNpx NaNpx transparent, 
+    NaNpx NaNpx transparent, 0px 0px 0px transparent, NaNpx NaNpx transparent, 
+    NaNpx NaNpx transparent;
     transform: rotate(0turn);
     opacity: 1;
   }
   50%,
   100% {
-    box-shadow: 0px 0px 0px transparent, -2.23929px 19.87424px #f94144, -19.49856px -4.45042px #f94144, 6.60558px -18.87767px #f94144, 18.01938px 8.67767px #f94144, -10.64064px 16.93448px #f94144, -15.63663px -12.4698px #f94144, 14.14214px -14.14214px #f94144, 0px 0px 0px transparent, -25.98076px -15px #f9c74f, 15px 25.98076px #f9c74f, 0px -30px #f9c74f, 0px 0px 0px transparent, -28.51221px -14.5277px #ffd166, 18.80913px 25.88854px #ffd166, -5.0059px -31.60603px #ffd166, -9.88854px 30.43381px #ffd166, 22.62742px -22.62742px #ffd166;
+    box-shadow: 0px 0px 0px transparent, -2.23929px 19.87424px #f94144, 
+    -19.49856px -4.45042px #f94144, 6.60558px -18.87767px #f94144, 
+    18.01938px 8.67767px #f94144, -10.64064px 16.93448px #f94144, 
+    -15.63663px -12.4698px #f94144, 14.14214px -14.14214px #f94144, 
+    0px 0px 0px transparent, -25.98076px -15px #f9c74f, 15px 25.98076px #f9c74f, 
+    0px -30px #f9c74f, 0px 0px 0px transparent, -28.51221px -14.5277px #ffd166, 
+    18.80913px 25.88854px #ffd166, -5.0059px -31.60603px #ffd166, 
+    -9.88854px 30.43381px #ffd166, 22.62742px -22.62742px #ffd166;
     opacity: 1;
   }
   100% {
