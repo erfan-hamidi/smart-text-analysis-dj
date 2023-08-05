@@ -9,7 +9,7 @@ System Analysis and Design Project - Buali Sina university
 downlaod model :
 <p><a href="https://drive.google.com/file/d/13QmMsfNwvm6U4asXd6gurvSkl3nbuIEL/view?usp=drive_link"> english sentiment analysis model link (imdb dataset)</a>  </p>
 <p><a href="https://drive.google.com/file/d/1T3IXeqAld5d6xq1Qq6DMsqXkvNzviYFc/view?usp=sharing"> persian sentiment analysis model link (digikala dataset) </a>  </p>
-<p><a href="https://drive.google.com/file/d/1F6_uiYzQIR_Wui2oztTxe4VDMkazRHng/view?usp=sharing"> english text summarization model link (cnn-dailymail dataset) </a>  </p>
+<p><a href="https://drive.google.com/file/d/10EZapoHN0lJ2MTZDTI6qS04ta0h0P9Bx/view?usp=sharing"> english text summarization model link (cnn-dailymail dataset) </a>  </p>
 
 ## Charts
 plots of persian sentiment analysis model 
