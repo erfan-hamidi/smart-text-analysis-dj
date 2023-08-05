@@ -11,8 +11,11 @@ downlaod model :
 <p><a href="https://drive.google.com/file/d/1T3IXeqAld5d6xq1Qq6DMsqXkvNzviYFc/view?usp=sharing"> persian sentiment analysis model link (digikala dataset) </a>  </p>
 
 ## Charts
-persian sentiment analysis model plot
+plots of persian sentiment analysis model 
 <img src="https://s8.uupload.ir/files/per-sen-model-chart_0jbt.png" width="900" height="400" > 
+plots of english sentiment analysis model 
+<img src="https://s8.uupload.ir/files/sen-ana-en-plt_n12z.png" width="900" height="400" > 
+
 
 ## Installation
 
