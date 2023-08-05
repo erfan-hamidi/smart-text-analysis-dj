@@ -21,34 +21,36 @@ function sendMessage() {
                 'output-type' : outputtype.value,
                 'input' : userMessage,
             }
-            try {
-                const response = fetch(apiUrl, {
+           
+                fetch(apiUrl, {
                     method: 'POST',
                     headers: headers,
                     body: JSON.stringify(inputdata),
-                });
-
-                if (response.ok) {
-                    const data = response.json();
-                    document.getElementById('message').textContent = data.message;
-                } else {
-                    document.getElementById('message').textContent = 'Error: Unable to access protected resource.';
-                }
-            } catch (error) {
-                document.getElementById('message').textContent = 'Error: Unable to access protected resource.';
-            }
+                })
+                .then((response) => {
+                    console.log(response.status);
+                    if (response.status == 401) {
+                        alert("You must login!")
+                    }
+                    if (!response.ok) {
+                      alert("ERROR")
+                      throw new Error("Network response was not ok");
+                    }
+                    
+                    return response.json();
+                  })
+                .then((data) => {
+                    console.log(data.message);
+                    document.getElementById('chat-history').textContent = data.message;
+                })
+                .catch((error) => {
+                    console.error("Error:", error);
+                    // Add error handling logic, like showing an error message to the user
+                  });
+                
+            
         }
 
-        // Clear the input field
-        userInput.value = '';
-
-        // Simulate a response from ChatGPT (You can replace this with actual API call and response)
-        setTimeout(() => {
-            const chatBubble = document.createElement('div');
-            chatBubble.className = 'chat-bubble gpt-bubble';
-            chatBubble.innerHTML = '<span class="message">ChatGPT response...</span>';
-            chatHistory.appendChild(chatBubble);
-        }, 500); // Delayed response simulation
     }
 //}
     //fetchProtectedResource();

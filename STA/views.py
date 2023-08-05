@@ -52,4 +52,4 @@ class STAApiView(APIView):
     def post(self, request):
         # Your view logic here
         print(request.data)
-        return Response({"message": "This is a protected view accessible to authenticated users."})
+        return Response({"message": "This is a protected view accessible to authenticated users."},status=status.HTTP_200_OK)

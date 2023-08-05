@@ -23,6 +23,7 @@ loginForm.addEventListener("submit", (e) => {
   })
     .then((response) => {
       if (!response.ok) {
+        alert("The email address or password you entered is invalid")
         throw new Error("Network response was not ok");
       }
       return response.json();
