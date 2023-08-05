@@ -12,9 +12,10 @@ downlaod model :
 
 ## Charts
 plots of persian sentiment analysis model 
-<img src="https://s8.uupload.ir/files/per-sen-model-chart_0jbt.png" width="900" height="400" > 
+<img src="https://s8.uupload.ir/files/per-sen-model-chart_0jbt.png" width="750" height="330" > 
+
 plots of english sentiment analysis model 
-<img src="https://s8.uupload.ir/files/sen-ana-en-plt_n12z.png" width="900" height="400" > 
+<img src="https://s8.uupload.ir/files/sen-ana-en-plt_n12z.png" width="750" height="330" > 
 
 
 ## Installation
