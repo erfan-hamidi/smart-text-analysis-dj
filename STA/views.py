@@ -49,6 +49,7 @@ class LoginApiView(APIView):
 class STAApiView(APIView):
     permission_classes = [IsAuthenticated]
 
-    def get(self, request):
+    def post(self, request):
         # Your view logic here
+        print(request.data)
         return Response({"message": "This is a protected view accessible to authenticated users."})

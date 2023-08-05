@@ -1,30 +1,35 @@
 function sendMessage() {
     const userInput = document.getElementById('user-input');
     const chatHistory = document.getElementById('chat-history');
-    var outputtype = document.getElementById("myRadio");
+    var outputtype = document.querySelector( 'input[name="toggle"]:checked');
     // Get the user's input text
     const userMessage = userInput.value.trim();
-    const apiUrl = 'http://127.0.0.1:8000/STA';
+    console.log(outputtype.value,userMessage);
+    const apiUrl = 'http://127.0.0.1:8000/STA/';
 
         
     if (userMessage !== '') {
         //  access token
         const accessToken = localStorage.getItem("access");
-        async function fetchProtectedResource() {
+        console.log(accessToken);
+        //async function fetchProtectedResource() {
             const headers = {
                 'Authorization': `Bearer ${accessToken}`,
                 'Content-Type': 'application/json',
-                'output-type' : outputtype,
             };
-
+            const inputdata = {
+                'output-type' : outputtype.value,
+                'input' : userMessage,
+            }
             try {
-                const response = await fetch(apiUrl, {
-                    method: 'GET',
-                    headers: headers
+                const response = fetch(apiUrl, {
+                    method: 'POST',
+                    headers: headers,
+                    body: JSON.stringify(inputdata),
                 });
 
                 if (response.ok) {
-                    const data = await response.json();
+                    const data = response.json();
                     document.getElementById('message').textContent = data.message;
                 } else {
                     document.getElementById('message').textContent = 'Error: Unable to access protected resource.';
@@ -45,5 +50,5 @@ function sendMessage() {
             chatHistory.appendChild(chatBubble);
         }, 500); // Delayed response simulation
     }
-}
-    fetchProtectedResource();
+//}
+    //fetchProtectedResource();

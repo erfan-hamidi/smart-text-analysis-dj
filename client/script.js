@@ -34,7 +34,7 @@ loginForm.addEventListener("submit", (e) => {
       alert("Login successful!");
       localStorage.setItem("refresh", data.refresh);
       localStorage.setItem("access", data.access);
-      const homeUrl = 'home.html'; // Replace with your home URL
+      const homeUrl = 'input.html'; // Replace with your home URL
       window.location.href = homeUrl;
     })
     .catch((error) => {
