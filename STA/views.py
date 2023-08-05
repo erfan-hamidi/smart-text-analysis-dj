@@ -10,13 +10,17 @@ from rest_framework.authtoken.models import Token
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework.permissions import IsAuthenticated
+from rest_framework import generics
 
 # views here.
 
-class UserSignUpViewSet(APIView):
+class UserSignUpAPI(generics.GenericAPIView):
     serializer_class = SignUpSerializer
+    permission_classes = ()
+    authentication_classes = ()
     
     def post(self, request, *args, **kwargs):
+        print(request.data)
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         user = serializer.save()
@@ -32,7 +36,6 @@ class LoginApiView(APIView):
     serializer_class = LoginSerializer
     def post(self, request, *args, **kwargs):
         
-        print('hi')
         if request.method == 'POST':
             serializer = LoginSerializer(data=request.data)
             print(request.data)
@@ -50,6 +53,15 @@ class STAApiView(APIView):
     permission_classes = [IsAuthenticated]
 
     def post(self, request):
-        # Your view logic here
-        print(request.data)
-        return Response({"message": "This is a protected view accessible to authenticated users."},status=status.HTTP_200_OK)
+        data = request.data
+        if data['output-type'] == 'sem' :
+            pass
+        elif data['output-type'] == 'sum':
+            pass
+        elif data['output-type'] == 'spa':
+            pass 
+        else:
+            return Response({
+                'error' : 'invalid input',
+            },status=status.HTTP_400_BAD_REQUEST)
+        

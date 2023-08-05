@@ -52,15 +52,15 @@ signupForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const formData = new FormData(signupForm);
   const email = formData.get("email");
-  const password = formData.get("password");
-  const username = formData.get("username")
+  const password = formData.get("pswd");
+  const username = formData.get("txt")
 
   const signupData = {
     email: email,
     username : username,
     password: password,
   };
-  //console.log(loginData)
+  console.log(signupData)
   // Replace 'your-api-login-endpoint' with the actual login API endpoint in your Django backend
   fetch("http://127.0.0.1:8000/STA/signup/", {
     method: "POST",
