@@ -9,6 +9,7 @@ System Analysis and Design Project - Buali Sina university
 downlaod model :
 <p><a href="https://drive.google.com/file/d/13QmMsfNwvm6U4asXd6gurvSkl3nbuIEL/view?usp=drive_link"> english sentiment analysis model link (imdb dataset)</a>  </p>
 <p><a href="https://drive.google.com/file/d/1T3IXeqAld5d6xq1Qq6DMsqXkvNzviYFc/view?usp=sharing"> persian sentiment analysis model link (digikala dataset) </a>  </p>
+<p><a href="https://drive.google.com/file/d/1F6_uiYzQIR_Wui2oztTxe4VDMkazRHng/view?usp=sharing"> english text summarization model link (cnn-dailymail dataset) </a>  </p>
 
 ## Charts
 plots of persian sentiment analysis model 
@@ -17,7 +18,8 @@ plots of persian sentiment analysis model
 plots of english sentiment analysis model 
 <img src="https://s8.uupload.ir/files/sen-ana-en-plt_n12z.png" width="750" height="330" > 
 
-
+## image retrieval output result :
+<img src="https://s8.uupload.ir/files/run_prj_b8n.png" >
 ## Installation
 
 ```bash
