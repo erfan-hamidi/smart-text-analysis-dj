@@ -97,7 +97,7 @@ def detect_spam(input_string):
         return "Spam" if prediction[0] == 1 else "Not Spam"
     result = predict_spam(input_string)
     print(f" - Prediction: {result}")
-    return "Accuracy: " + str(accuracy_score(y_test, prediction).round()) + '\nPrediction:' + result
+    return "Accuracy: " + str(accuracy_score(y_test, prediction).round()) + '\nPrediction :' + result
 
 
 # views here.
@@ -147,8 +147,7 @@ class LoginApiView(APIView):
         
 
 class STAApiView(APIView):
-    permission_classes = ()
-    authentication_classes = ()
+    permission_classes = [IsAuthenticated]
     def post(self, request):
         data = request.data
 
@@ -173,7 +172,7 @@ class STAApiView(APIView):
                 },status=status.HTTP_200_OK)
         # Convert the predicted score to a binary sentiment label
 
-        
+
             elif lang == 'en':
                 word_to_index = imdb.get_word_index()
                 VOCAB_SIZE = 30000  # Ensure VOCAB_SIZE is the same as used during training
