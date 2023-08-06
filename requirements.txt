@@ -15,3 +15,4 @@ Tranformers=="Def"
 pandas=="Def"
 numpy=="Def"
 tzdata==2023.3
+langdetect==1.0.9
