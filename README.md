@@ -5,11 +5,12 @@ System Analysis and Design Project - Buali Sina university
 1. sentiment analysis (Persian and english support) : this Phase is based on CNN model and used IMDB Dataset of 50K Movie Reviews .
 2. text summarization (Persian and english support) : this Phase is based on Bart model that is a Seq-to-Seq Pre-training model for Natural Language Generation, Translation, and Comprehension . our dataset is cnn_dailymail .
 3. image retreieval system  : this Phase is based on VGG16 Deep model .
+4. spam sms/email detection : using ensemble learning using : 1- MultinomialNB()  2-LinearSVC()  3-DecisionTreeClassifier() with 98.5% accuracy
 
 downlaod model :
 <p><a href="https://drive.google.com/file/d/13QmMsfNwvm6U4asXd6gurvSkl3nbuIEL/view?usp=drive_link"> english sentiment analysis model link (imdb dataset)</a>  </p>
 <p><a href="https://drive.google.com/file/d/1T3IXeqAld5d6xq1Qq6DMsqXkvNzviYFc/view?usp=sharing"> persian sentiment analysis model link (digikala dataset) </a>  </p>
-<p><a href="https://drive.google.com/file/d/10EZapoHN0lJ2MTZDTI6qS04ta0h0P9Bx/view?usp=sharing"> english text summarization model link (cnn-dailymail dataset) </a>  </p>
+<p><a href="https://drive.google.com/file/d/10EZapoHN0lJ2MTZDTI6qS04ta0h0P9Bx/view?usp=sharing"> english text summarization model link (cnn-dailymail dataset) </a>  <p><a href="https://drive.google.com/file/d/10EZapoHN0lJ2MTZDTI6qS04ta0h0P9Bx/view?usp=sharing"> english spam detection model link (cnn-dailymail dataset) </a>
 
 ## Charts
 plots of persian sentiment analysis model 
