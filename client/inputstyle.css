@@ -12,7 +12,6 @@ body {
 .chat-container {
   width: 1000px;
 	height: 500px;
-  float: inline-end;
 	background: red;
 	overflow: hidden;
     background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
@@ -23,15 +22,16 @@ body {
 .chat-history {
     padding: 10px;
     max-height: 50%;
+    margin-top: 100px;
     overflow-y: auto;
-    color: #ffffff;
+    color: #e0dede;
     
 }
 
 .chat-input {
     
-    margin-top: 170px;
-    left: 100px;
+    margin-top: 235px;
+    
     
     display: flex;
     padding: 10px;
@@ -70,17 +70,17 @@ button:hover {
 
 #radiobutton{
     float: left;
-    width:20%;
+    width:30%;
 }
 
 :root {
-  --cSize: 30px;
+  --cSize: 25px;
   --cInactive: #232739;
   --cActive: #577af3;
   --particleSize: 0px;
   --cEasing: ease;
   --cTiming: 0.5s;
-  --innerPaddingSize: 30px;
+  --innerPaddingSize: 25px;
 }
 
 .particles-checkbox {

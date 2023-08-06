@@ -151,6 +151,10 @@ class STAApiView(APIView):
     authentication_classes = ()
     def post(self, request):
         data = request.data
+
+
+
+        #sentiment of text
         if data['output-type'] == 'sen' :
             lang = detect(data['input'])
             print(lang)
@@ -163,11 +167,13 @@ class STAApiView(APIView):
                 FA_loaded_model = tf.keras.models.load_model("C:\code\smart-text-analysis-dj\STA\Per_Sen_Analysis_Model.hdf5")
                 FA_prediction  = FA_loaded_model.predict(padded_input)
                 FA_sentiment = "Positive" if FA_prediction[0][0] >= 0.5 else "Negative"
-                print("FA ---->" , data['input'] , " : " , FA_prediction  , " : " , FA_sentiment  )
+                print("FA ---->"  , " : " , FA_prediction  , " : " , FA_sentiment  )
                 return Response({
-                'message' :'result' + str(FA_prediction)  + " : " + str(FA_sentiment),
+                'message' :'result: ' + str(FA_prediction)  + " sentiment: " + str(FA_sentiment),
                 },status=status.HTTP_200_OK)
         # Convert the predicted score to a binary sentiment label
+
+        
             elif lang == 'en':
                 word_to_index = imdb.get_word_index()
                 VOCAB_SIZE = 30000  # Ensure VOCAB_SIZE is the same as used during training
@@ -180,16 +186,23 @@ class STAApiView(APIView):
                 sentiment = "Positive" if prediction >= 0.5 else "Negative"
                 print( " : " , prediction  , " : " , sentiment  )
                 return Response({
-                'message' : 'result:' + str(prediction)  + " : " + str(sentiment),
+                'message' : 'result: ' + str(prediction)  + " sentiment: " + str(sentiment),
                 },status=status.HTTP_200_OK)
             else:
                 return Response({
                 'error' : 'invalid input',
             },status=status.HTTP_400_BAD_REQUEST)
+
+
+
+
         elif data['output-type'] == 'sum':
             pass
 
-#spam 
+
+
+
+        #spam detect
         elif data['output-type'] == 'spa':
             res = detect_spam(data['input'])
             return Response({
