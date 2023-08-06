@@ -1,3 +1,6 @@
 venv
 *.h5
 *.hdf5
+*.tsv
+*.csv
+*.joblib

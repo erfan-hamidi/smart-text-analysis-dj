@@ -35,3 +35,8 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self) -> str:
         return self.email
+    
+class ChatHistory(models.Model):
+    text = models.TextField()
+    date = models.DateTimeField(auto_now=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)

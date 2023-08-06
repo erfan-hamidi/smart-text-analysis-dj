@@ -10,8 +10,9 @@ body {
 }
 
 .chat-container {
-    width: 80%;
-	height: 65%;
+  width: 1000px;
+	height: 500px;
+  float: inline-end;
 	background: red;
 	overflow: hidden;
     background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
@@ -21,7 +22,7 @@ body {
 
 .chat-history {
     padding: 10px;
-    max-height: 400px;
+    max-height: 50%;
     overflow-y: auto;
     color: #ffffff;
     
@@ -29,8 +30,8 @@ body {
 
 .chat-input {
     
-    margin-top: 570px;
-    margin-left: 100px;
+    margin-top: 170px;
+    left: 100px;
     
     display: flex;
     padding: 10px;
