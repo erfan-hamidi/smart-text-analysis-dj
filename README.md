@@ -10,7 +10,9 @@ System Analysis and Design Project - Buali Sina university
 downlaod model :
 <p><a href="https://drive.google.com/file/d/13QmMsfNwvm6U4asXd6gurvSkl3nbuIEL/view?usp=drive_link"> english sentiment analysis model link (imdb dataset)</a>  </p>
 <p><a href="https://drive.google.com/file/d/1T3IXeqAld5d6xq1Qq6DMsqXkvNzviYFc/view?usp=sharing"> persian sentiment analysis model link (digikala dataset) </a>  </p>
-<p><a href="https://drive.google.com/file/d/10EZapoHN0lJ2MTZDTI6qS04ta0h0P9Bx/view?usp=sharing"> english text summarization model link (cnn-dailymail dataset) </a>  <p><a href="https://drive.google.com/file/d/1sESyT11mTa2pI4PT4vMqVufeC1NE2s45/view?usp=sharing"> english spam detection model link (cnn-dailymail dataset) </a>
+<p><a href="https://drive.google.com/file/d/10EZapoHN0lJ2MTZDTI6qS04ta0h0P9Bx/view?usp=sharing"> english text summarization model link (cnn-dailymail dataset) </a>  <p><a href="https://drive.google.com/file/d/1sESyT11mTa2pI4PT4vMqVufeC1NE2s45/view?usp=sharing"> english spam detection model link  </a>
+
+<a href="https://www.aparat.com/v/zliNs" > AI part technical report video</a> 
 
 ## Charts
 plots of persian sentiment analysis model 
